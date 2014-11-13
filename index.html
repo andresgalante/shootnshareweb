@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Shoot'nShare Keycloak OAuth2 Demo.</title>
+  <meta name="description" content="An very basic example of how to use the Wookmark jQuery plug-in.">
+  <meta name="author" content="Christoph Ono, Sebastian Helzle">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <h1><img src="img/icon.png" alt="icon" width="100" height="100"></h1>
+      <p>Shoot'nShare Keycloak OAuth2 Demo.</p>
+      <ul>
+        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
+        <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+      </ul>      
+      
+    </header>
+    
+    <div id="main" role="main">
+
+      <ul id="tiles">
+        <!-- These are our grid blocks -->
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_1.jpg" width="200" height="283"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_2.jpg" width="200" height="300"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_3.jpg" width="200" height="252"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_4.jpg" width="200" height="158"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_5.jpg" width="200" height="300"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_6.jpg" width="200" height="297"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_7.jpg" width="200" height="200"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_8.jpg" width="200" height="200"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_9.jpg" width="200" height="398"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_10.jpg" width="200" height="267"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_1.jpg" width="200" height="283"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_2.jpg" width="200" height="300"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_3.jpg" width="200" height="252"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_4.jpg" width="200" height="158"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_5.jpg" width="200" height="300"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_6.jpg" width="200" height="297"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_7.jpg" width="200" height="200"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_8.jpg" width="200" height="200"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_9.jpg" width="200" height="398"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_10.jpg" width="200" height="267"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_1.jpg" width="200" height="283"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_2.jpg" width="200" height="300"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_3.jpg" width="200" height="252"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_4.jpg" width="200" height="158"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_5.jpg" width="200" height="300"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_6.jpg" width="200" height="297"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_7.jpg" width="200" height="200"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_8.jpg" width="200" height="200"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_9.jpg" width="200" height="398"></li>
+        <li><img src="bower_components/wookmark-jquery/sample-images/image_10.jpg" width="200" height="267"></li>
+        <!-- End of grid blocks -->
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- include jQuery -->
+  <script src="bower_components/wookmark-jquery/libs/jquery.min.js"></script>
+
+  <!-- Include the plug-in -->
+  <script src="bower_components/wookmark-jquery/jquery.wookmark.min.js"></script>
+
+  <!-- Once the page is loaded, initalize the plug-in. -->
+  <script type="text/javascript">
+    (function ($){
+      var handler = $('#tiles li');
+
+      handler.wookmark({
+          // Prepare layout options.
+          autoResize: true, // This will auto-update the layout when the browser window is resized.
+          container: $('#main'), // Optional, used for some extra CSS styling
+          offset: 5, // Optional, the distance between grid items
+          outerOffset: 10, // Optional, the distance to the containers border
+          itemWidth: 210 // Optional, the width of a grid item
+      });
+
+      // Capture clicks on grid items.
+      //handler.click(function(){
+        // Randomize the height of the clicked item.
+        //var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
+        //$(this).css('height', newHeight+'px');
+
+        // Update the layout.
+       // handler.wookmark();
+     // });
+      
+    })(jQuery);
+  </script>
+
+</body>
+</html>
